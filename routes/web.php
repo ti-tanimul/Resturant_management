@@ -61,6 +61,7 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/delete-about/{id}',[AdminController::class, 'deleteAbout'])->name('delete-about');
     Route::get('/admin-logout',[AdminController::class, 'adminLogout'])->name('admin-logout');
     // Service
+    
     Route::get('/add-service',[ServiceController::class, 'addService'])->name('add-service');
     Route::post('/store-service',[ServiceController::class, 'storeService'])->name('store-service');
     Route::get('/manage-service',[ServiceController::class, 'manageService'])->name('manage-service');

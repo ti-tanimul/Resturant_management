@@ -1,7 +1,7 @@
 @extends('admin.admin-master')
 @section('main_section')
 <section class="py-5">
-    <form action="{{ route('store-product') }}" method="post" enctype="multipart/form-data" >
+    <form action="{{ route('add_product') }}" method="post" enctype="multipart/form-data" >
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

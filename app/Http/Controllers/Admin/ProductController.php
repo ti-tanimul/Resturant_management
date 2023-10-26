@@ -44,7 +44,6 @@ class ProductController extends Controller
     }
 
     public function manageProduct(){
-
         $productcontents = Product::join('services', 'services.id','=',  'products.category')
         ->select('products.*', 'services.name as services_name' )->get();
         return view('admin.manage-product', compact('productcontents'));
